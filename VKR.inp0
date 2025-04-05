@@ -32,6 +32,9 @@
 			</areaBehavTypeElements>
 		</areaBehaviorType>
 	</areaBehaviorTypes>
+	<areaMeasurements>
+		<areaMeasurement name="" no="1"/>
+	</areaMeasurements>
 	<colorDistributions>
 		<colorDistribution name="По умолчанию" no="1">
 			<colorDistrEl>
@@ -360,6 +363,34 @@
 			</curvSpeedFuncDataPts>
 		</curvSpeedFunc>
 	</curvSpeedFuncs>
+	<dataCollectionMeasurements>
+		<dataCollectionMeasurement name="Коменда в чн" no="1">
+			<dataCollectionPoints>
+				<intObjectRef key="1"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="Коменда к метро" no="2">
+			<dataCollectionPoints>
+				<intObjectRef key="2"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="Шаврова к авиа" no="3">
+			<dataCollectionPoints>
+				<intObjectRef key="3"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+		<dataCollectionMeasurement name="Шаврова к парашютной" no="4">
+			<dataCollectionPoints>
+				<intObjectRef key="4"/>
+			</dataCollectionPoints>
+		</dataCollectionMeasurement>
+	</dataCollectionMeasurements>
+	<dataCollectionPoints>
+		<dataCollectionPoint lane="3 1" name="" no="1" pos="396.58865197430134"/>
+		<dataCollectionPoint lane="4 1" name="" no="2" pos="221.99312553739767"/>
+		<dataCollectionPoint lane="2 1" name="" no="3" pos="208.17723712040629"/>
+		<dataCollectionPoint lane="1 1" name="" no="4" pos="399.04274423298284"/>
+	</dataCollectionPoints>
 	<desAccelerationFunctions>
 		<desAccelerationFunction name="Автомобиль" no="1">
 			<accelFuncDataPts>
@@ -1163,9 +1194,9 @@
 		<areaMeasResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 		<areaResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
 		<convergence writeFile="false"/>
-		<dataColl collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<dataColl collectData="true" fromTime="0" interval="99999" toTime="99999"/>
 		<dataCollRawData fromTime="0" toTime="99999" writeFile="false"/>
-		<delays collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<delays collectData="true" fromTime="0" interval="99999" toTime="99999"/>
 		<dischRec fromTime="0" toTime="99999" writeFile="false"/>
 		<greenTimeDistribution fromTime="0" toTime="99999" writeFile="false"/>
 		<linkResults collectData="false" fromTime="0" interval="99999" perLane="false" toTime="99999"/>
@@ -1192,13 +1223,13 @@
 		<pedTravTmODData fromTime="0" interval="99999" toTime="99999" writeFile="false"/>
 		<pedTravTmRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<pedTravTms collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<queues collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<queues collectData="true" fromTime="0" interval="99999" toTime="99999"/>
 		<scDetRec writeFile="false"/>
 		<ssam fromTime="0" toTime="99999" writeFile="false"/>
 		<sigChgs writeDatabase="false" writeFile="false"/>
 		<vehInpData writeFile="false"/>
 		<vehInps collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<vehNetPerf collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<vehNetPerf collectData="true" fromTime="0" interval="99999" toTime="99999"/>
 		<vehRec filterType="ALL" fromTime="0" inclParkVehs="false" resolution="1" toTime="99999" writeDatabase="false" writeFile="false">
 			<selectedAttributes>
 				<attributeSelection attributeID="SIMSEC" decimals="2" format="SECONDS" showUnits="false"/>
@@ -1228,7 +1259,7 @@
 		<linkBehaviorType anmFlag="false" drivBehavDef="5" name="Велосипедная дорожка (свободный обгон)" no="5"/>
 	</linkBehaviorTypes>
 	<links>
-		<link assumSpeedOncom="60" consVehInDynPot="false" costPerKm="0" desSpeedFact="1" direction="ALL" displayType="1" emergStopDist="5" emiCalcAct="true" gradient="0" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10" lnChgDist="200" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500" mesoFollowUpGap="0" mesoSpeed="50" mesoSpeedModel="VEHICLEBASED" name="" netPerfEvalAct="true" no="1" ovtOnlyPT="false" ovtSpeedFact="1.3" rvsPark="false" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0" surch2="0" thickness="0" vehDynPotG="3" vehRecAct="true">
+		<link assumSpeedOncom="60" consVehInDynPot="false" costPerKm="0" desSpeedFact="1" direction="ALL" displayType="1" emergStopDist="5" emiCalcAct="true" gradient="0" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10" lnChgDist="200" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500" mesoFollowUpGap="0" mesoSpeed="50" mesoSpeedModel="VEHICLEBASED" name="Шаврова в сторону Парашютной" netPerfEvalAct="true" no="1" ovtOnlyPT="false" ovtSpeedFact="1.3" rvsPark="false" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0" surch2="0" thickness="0" vehDynPotG="3" vehRecAct="true">
 			<geometry>
 				<linkPolyPts>
 					<linkPolyPoint radiusEffect="BRAKE" radiusSrc="CALCULATED" x="-256.61717661628177" y="-152.94089609221385" zOffset="0"/>
@@ -1239,7 +1270,7 @@
 				<lane markingType="1" width="3.5"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60" consVehInDynPot="false" costPerKm="0" desSpeedFact="1" direction="ALL" displayType="1" emergStopDist="5" emiCalcAct="true" gradient="0" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10" lnChgDist="200" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500" mesoFollowUpGap="0" mesoSpeed="50" mesoSpeedModel="VEHICLEBASED" name="" netPerfEvalAct="true" no="2" ovtOnlyPT="false" ovtSpeedFact="1.3" rvsPark="false" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0" surch2="0" thickness="0" vehDynPotG="3" vehRecAct="true">
+		<link assumSpeedOncom="60" consVehInDynPot="false" costPerKm="0" desSpeedFact="1" direction="ALL" displayType="1" emergStopDist="5" emiCalcAct="true" gradient="0" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10" lnChgDist="200" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500" mesoFollowUpGap="0" mesoSpeed="50" mesoSpeedModel="VEHICLEBASED" name="Шаврова в сторону Авиконструкторов" netPerfEvalAct="true" no="2" ovtOnlyPT="false" ovtSpeedFact="1.3" rvsPark="false" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0" surch2="0" thickness="0" vehDynPotG="3" vehRecAct="true">
 			<geometry>
 				<linkPolyPts>
 					<linkPolyPoint radiusEffect="BRAKE" radiusSrc="CALCULATED" x="308.02530678402786" y="184.14184104620122" zOffset="0"/>
@@ -1250,7 +1281,7 @@
 				<lane markingType="1" width="3.5"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60" consVehInDynPot="false" costPerKm="0" desSpeedFact="1" direction="ALL" displayType="1" emergStopDist="5" emiCalcAct="true" gradient="0" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10" lnChgDist="200" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500" mesoFollowUpGap="0" mesoSpeed="50" mesoSpeedModel="VEHICLEBASED" name="" netPerfEvalAct="true" no="3" ovtOnlyPT="false" ovtSpeedFact="1.3" rvsPark="false" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0" surch2="0" thickness="0" vehDynPotG="3" vehRecAct="true">
+		<link assumSpeedOncom="60" consVehInDynPot="false" costPerKm="0" desSpeedFact="1" direction="ALL" displayType="1" emergStopDist="5" emiCalcAct="true" gradient="0" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10" lnChgDist="200" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500" mesoFollowUpGap="0" mesoSpeed="50" mesoSpeedModel="VEHICLEBASED" name="Комендантский в сторону Шуваловского" netPerfEvalAct="true" no="3" ovtOnlyPT="false" ovtSpeedFact="1.3" rvsPark="false" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0" surch2="0" thickness="0" vehDynPotG="3" vehRecAct="true">
 			<geometry>
 				<linkPolyPts>
 					<linkPolyPoint radiusEffect="BRAKE" radiusSrc="CALCULATED" x="322.07283365747799" y="-290.3734815372178" zOffset="0"/>
@@ -1261,7 +1292,7 @@
 				<lane markingType="1" width="4.5"/>
 			</lanes>
 		</link>
-		<link assumSpeedOncom="60" consVehInDynPot="false" costPerKm="0" desSpeedFact="1" direction="ALL" displayType="1" emergStopDist="5" emiCalcAct="true" gradient="0" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10" lnChgDist="200" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500" mesoFollowUpGap="0" mesoSpeed="50" mesoSpeedModel="VEHICLEBASED" name="" netPerfEvalAct="true" no="4" ovtOnlyPT="false" ovtSpeedFact="1.3" rvsPark="false" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0" surch2="0" thickness="0" vehDynPotG="3" vehRecAct="true">
+		<link assumSpeedOncom="60" consVehInDynPot="false" costPerKm="0" desSpeedFact="1" direction="ALL" displayType="1" emergStopDist="5" emiCalcAct="true" gradient="0" hasOvtLn="false" isPedArea="false" level="1" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10" lnChgDist="200" lnChgDistIsPerLn="false" lnChgEvalAct="true" lookAheadDistOvt="500" mesoFollowUpGap="0" mesoSpeed="50" mesoSpeedModel="VEHICLEBASED" name="Комендантский в сторону метро" netPerfEvalAct="true" no="4" ovtOnlyPT="false" ovtSpeedFact="1.3" rvsPark="false" showClsfValues="true" showLinkBar="true" showVeh="true" surch1="0" surch2="0" thickness="0" vehDynPotG="3" vehRecAct="true">
 			<geometry>
 				<linkPolyPts>
 					<linkPolyPoint radiusEffect="BRAKE" radiusSrc="CALCULATED" x="-22.115107108830124" y="271.09157913676108" zOffset="0"/>
