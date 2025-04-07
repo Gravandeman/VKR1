@@ -1,0 +1,21 @@
+# ✅ Базовые библиотеки для твоего AI-проекта со светофорами
+
+# Работа с таблицами и массивами
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.4.1.post1
+
+# TensorFlow (стабильная версия без ошибки DistributedDatasetInterface)
+tensorflow==2.15.0
+ml-dtypes==0.2.0
+tensorboard==2.15.1
+
+# Взаимодействие с SQLite при необходимости
+sqlalchemy==2.0.29
+
+# Визуализация данных (опционально)
+matplotlib==3.8.3
+seaborn==0.13.2
+
+# Только для разработки и генерации requirements.txt (не обязательно устанавливать)
+# pip-tools==7.3.0
